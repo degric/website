@@ -1,1 +1,3 @@
-https://gist.githubusercontent.com/ishad0w/788555191c7037e249a439542c53e170/raw/3822ba49241e6fd851ca1c1cbcc4d7e87382f484/sources.list
+http://us.archive.ubuntu.com/ubuntu/: For the deb and deb-src types, with the suites noble, noble-updates, noble-backports, and noble-proposed
+http://security.ubuntu.com/ubuntu/: For the deb and deb-src types, with the suite noble-security 
+
