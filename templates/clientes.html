@@ -1,0 +1,36 @@
+{% extends 'template.html' %}
+{% block body %} 
+
+<div class="col pt-3">
+    <div>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefono</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for id, nombre, apellido, email, telefono in clientes %}
+          <tr>
+            <th scope="row">{{id}}</th>
+            <th scope="row">{{nombre}}</th>
+            <th scope="row">{{apellido}}</th>
+            <th scope="row">{{email}}</th>
+            <th scope="row">{{telefono}}</th>
+            <th scope="row">
+              <a style="text-decoration: none;" href="/editCliente/{{id}}" class="text-primary">Editar</a>
+              <a style="text-decoration: none;" href="/deleteCliente/{{id}}" class="text-danger">Eliminar</a>
+            </th>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock%}

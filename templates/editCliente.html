@@ -1,0 +1,78 @@
+{% extends 'template.html' %} {% block body %}
+
+<div class="row col justify-content-center">
+  <div class="col-md-6">
+    <div class="card card-body">
+      <form method="post" class="col">
+        <div class="form-group row">
+          <label for="id" class="col col-form-label">Id:</label>
+          <div class="col" id="id">
+            <input
+              readonly
+              value="{{ cliente[0] }}"
+              class="form-control-plaintext"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="nombre" class="col col-form-label">Nombre: </label>
+          <div class="col">
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              value="{{ cliente[1] }}"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="apellido" class="col col-form-label">Apellido:</label>
+          <div class="col">
+            <input
+              type="text"
+              name="apellido"
+              value="{{ cliente[2] }}"
+              id="apellido"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="email" class="col col-form-label">Email:</label>
+          <div class="col">
+            <input
+              type="text"
+              name="email"
+              value="{{ cliente[3] }}"
+              id="email"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="telefono" class="col col-form-label">Telefono:</label>
+          <div class="col">
+            <input
+              type="text"
+              name="telefono"
+              value="{{ cliente[4] }}"
+              id="telefono"
+            />
+          </div>
+        </div>
+
+        <div class="form-group p-1">
+          <input
+            type="submit"
+            value="Actualizar"
+            class="btn btn-warning form-control"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
